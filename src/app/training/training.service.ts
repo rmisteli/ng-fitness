@@ -25,6 +25,10 @@ export class TrainingService {
     this.exerciseChanged.next({ ...this.runningExercise });
   }
 
+  getExercises() {
+    return this.exercises.slice();
+  }
+
   completeExercise() {
     this.exercises.push({
       ...this.runningExercise,
